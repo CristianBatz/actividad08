@@ -11,8 +11,18 @@ def numero_natural(n2):
 def fibonacci(n3):
     if n3 == 0:
         return 0
+    elif n3 == 1:
+        return 1
     else:
-        return n3 + fibonacci(n3-1)
+        return fibonacci(n3-1) + fibonacci(n3-2)
+
+def cantidad_letras(n4, n5, i=0):
+    if i >= len(n4):
+        return 0
+    elif n4[i] == n5:
+        return 1 + cantidad_letras(n4, n5, i + 1)
+    else:
+        return cantidad_letras(n4, n5, i + 1)
 
 
 opcion = 0
@@ -38,3 +48,12 @@ while opcion != 7:
         print("=== Fibonacci ===")
         n3 = int(input("Ingresa un numero: "))
         print(fibonacci(n3))
+    if opcion == 4:
+        print("=== buscar letras en una palabra ===")
+        n4 = input("Ingresa una palabra: ")
+        n5 = input("Ingresa una letra: ")
+        print(cantidad_letras(n4, n5))
+    if opcion == 5:
+        print("=== Cadena de texto ===")
+        texto = input("Ingrese un texto: ")
+
