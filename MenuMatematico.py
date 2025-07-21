@@ -24,6 +24,18 @@ def cantidad_letras(n4, n5, i=0):
     else:
         return cantidad_letras(n4, n5, i + 1)
 
+def invertir_texto(texto, i=0):
+    if i == len(texto):
+        return ""
+    else:
+        return invertir_texto(texto, i + 1) + texto[i]
+def potencia(base, exponente):
+    if exponente == 0:
+        return 1
+    elif exponente == 1:
+        return base
+    else:
+        return base * potencia(base, exponente - 1)
 
 opcion = 0
 while opcion != 7:
@@ -56,4 +68,13 @@ while opcion != 7:
     if opcion == 5:
         print("=== Cadena de texto ===")
         texto = input("Ingrese un texto: ")
+        print(invertir_texto(texto))
+    if opcion == 6:
+        print("=== potencia de un numero ===")
+        base = int(input("Ingresa un numero: "))
+        exponente = int(input("Ingresa un numero: "))
+        print(potencia(base, exponente))
+
+
+
 
