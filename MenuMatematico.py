@@ -52,29 +52,28 @@ while opcion != 7:
         print("=== Factorial ===")
         n = int(input("Ingresa un numero: "))
         print(factorial(n))
-    if opcion == 2:
+    elif opcion == 2:
         print("=== Suma de numeros naturales ===")
         n2 = int(input("Ingresa un numero: "))
         print(numero_natural(n2))
-    if opcion == 3:
+    elif opcion == 3:
         print("=== Fibonacci ===")
         n3 = int(input("Ingresa un numero: "))
         print(fibonacci(n3))
-    if opcion == 4:
+    elif opcion == 4:
         print("=== buscar letras en una palabra ===")
         n4 = input("Ingresa una palabra: ")
         n5 = input("Ingresa una letra: ")
         print(cantidad_letras(n4, n5))
-    if opcion == 5:
+    elif opcion == 5:
         print("=== Cadena de texto ===")
         texto = input("Ingrese un texto: ")
         print(invertir_texto(texto))
-    if opcion == 6:
+    elif opcion == 6:
         print("=== potencia de un numero ===")
         base = int(input("Ingresa un numero: "))
         exponente = int(input("Ingresa un numero: "))
         print(potencia(base, exponente))
-
-
-
-
+    if opcion == 7:
+        print("=== Salir ===")
+        print("Saliendo")
